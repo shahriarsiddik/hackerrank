@@ -1,11 +1,13 @@
 class Person:
-	def __init__(self, firstName, lastName, idNumber):
-		self.firstName = firstName
-		self.lastName = lastName
-		self.idNumber = idNumber
-	def printPerson(self):
-		print("Name:", self.lastName + ",", self.firstName)
-		print("ID:", self.idNumber)
+    def __init__(self, firstName, lastName, idNumber):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.idNumber = idNumber
+
+    def printPerson(self):
+        print("Name:", self.lastName + ",", self.firstName)
+        print("ID:", self.idNumber)
+
 
 class Student(Person):
     # Class Constructor
@@ -21,7 +23,7 @@ class Student(Person):
         self.firstName = firstName
         self.lastName = lastName
         self.idNumber = idNumber
-        self.scores = sum(scores)/len(scores)
+        self.scores = sum(scores) / len(scores)
 
     #   Function Name: calculate
     #   Return: A character denoting the grade.
@@ -29,15 +31,15 @@ class Student(Person):
     # Write your function here
 
     def calculate(self):
-        if self.scores< 40:
+        if self.scores < 40:
             return 'T'
-        elif 40 <= self.scores< 55:
+        elif 40 <= self.scores < 55:
             return 'D'
-        elif 55 <= self.scores< 70:
+        elif 55 <= self.scores < 70:
             return 'P'
-        elif 70 <= self.scores< 80:
+        elif 70 <= self.scores < 80:
             return 'A'
-        elif 80 <= self.scores< 90:
+        elif 80 <= self.scores < 90:
             return 'E'
         else:
             return 'O'
